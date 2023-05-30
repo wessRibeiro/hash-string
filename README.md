@@ -1,12 +1,12 @@
 - garanta as configs de banco:
-`
+```sh
   DB_CONNECTION=mysql
   DB_HOST=db
   DB_PORT=3306
   DB_DATABASE=laravel
   DB_USERNAME=root
   DB_PASSWORD=root
-`
+```
 
 - Crie o Arquivo .env
 ```sh
@@ -31,7 +31,9 @@ docker exec hash-string-app-1 php artisan migrate
 ```
 
 ###testes
-`docker exec hash-string-app-1 php artisan test`
+```sh
+docker exec hash-string-app-1 php artisan test
+```
 
 
 - Acessar o backend
