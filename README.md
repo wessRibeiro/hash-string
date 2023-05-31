@@ -1,3 +1,7 @@
+###informações
+- é necessário Docker para montar o ambiente
+
+
 - Crie o Arquivo .env
 ```sh
 cp .env.example .env
@@ -12,7 +16,7 @@ cp .env.example .env
   DB_PASSWORD=root
 ```
 
-- Suba os serviços
+- Suba os serviços (subirá o banco, um adminer client e o backend)
 ```sh
 bash up.sh
 ```
