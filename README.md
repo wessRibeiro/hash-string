@@ -1,13 +1,12 @@
-### Informações
+### informações
 - é necessário Docker para montar o ambiente
-
 
 - Crie o Arquivo .env
 ```sh
 cp .env.example .env
 ```
 - garanta as configs de banco:
-```
+```sh
   DB_CONNECTION=mysql
   DB_HOST=db
   DB_PORT=3306
@@ -37,7 +36,7 @@ docker exec hash-string-app-1 php artisan migrate
 docker exec hash-string-app-1 php artisan avato:test Ávato --requests=20
 ````
 
-### Rotas:
+### rotas:
 
 - para listar de forma paginada 
 http://localhost/api/hash
