@@ -1,4 +1,4 @@
-###informações
+### Informações
 - é necessário Docker para montar o ambiente
 
 
@@ -32,12 +32,12 @@ docker exec hash-string-app-1 php artisan key:generate
 docker exec hash-string-app-1 php artisan migrate
 ```
 
-###para executar o comando:
+### para executar o comando:
 ````sh
 docker exec hash-string-app-1 php artisan avato:test Ávato --requests=20
 ````
 
-###rotas:
+### Rotas:
 
 - para listar de forma paginada 
 http://localhost/api/hash
@@ -51,7 +51,7 @@ http://localhost/api/hash?page=1&attempts=500
 - para receber uma hash (agnóstico)
   http://localhost/api/hash/{string}
 
-###Acessar o admin de banco de dados
+### Acessar o admin de banco de dados
 [http://localhost:8080](http://localhost:8080)
 
 
