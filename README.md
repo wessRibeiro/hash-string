@@ -1,3 +1,10 @@
+### informações
+- é necessário Docker para montar o ambiente
+
+- Crie o Arquivo .env
+```sh
+cp .env.example .env
+```
 - garanta as configs de banco:
 ```sh
   DB_CONNECTION=mysql
@@ -8,16 +15,10 @@
   DB_PASSWORD=root
 ```
 
-- Crie o Arquivo .env
-```sh
-cp .env.example .env
-```
-
-- Suba os serviços
+- Suba os serviços (subirá o banco, um adminer client e o backend)
 ```sh
 bash up.sh
 ```
-
 
 - instale as dependencias do laravel
 ```sh
@@ -30,16 +31,26 @@ docker exec hash-string-app-1 php artisan key:generate
 docker exec hash-string-app-1 php artisan migrate
 ```
 
-###testes
-```sh
-docker exec hash-string-app-1 php artisan test
-```
+### para executar o comando:
+````sh
+docker exec hash-string-app-1 php artisan avato:test Ávato --requests=20
+````
 
+### rotas:
 
-- Acessar o backend
-[http://localhost:80](http://localhost:80)
+- para listar de forma paginada 
+http://localhost/api/hash
 
-- Acessar o admin de banco de dados
+- para listar de forma paginada e com filtro por attempts 
+http://localhost/api/hash?attempts=500
+
+- para listar de forma paginada e com filtro por attempts e com pagina  
+http://localhost/api/hash?page=1&attempts=500
+
+- para receber uma hash (agnóstico)
+  http://localhost/api/hash/{string}
+
+### Acessar o admin de banco de dados
 [http://localhost:8080](http://localhost:8080)
 
 
